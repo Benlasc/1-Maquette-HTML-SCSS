@@ -1,0 +1,90 @@
+.news {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    justify-items: center;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        max-width: 80%;
+
+        &__img {
+            border-top-left-radius: calc(0.25rem - 1px);
+            border-top-right-radius: calc(0.25rem - 1px);
+            padding-bottom: 50%;
+
+            &--01 {
+                background: url("./images/03-actuAside.jpg") no-repeat center 100% / cover;
+                // position: absolute;
+                // top: 0;
+                // bottom: 0;
+                // left: 0;
+                // right: 0;
+            }
+
+            &--02 {
+                background: url("./images/01-welcomeAside.jpg") no-repeat center 100% / cover;
+            }
+
+            &--03 {
+                background: url("./images/02-parcMonceauAside.jpg") no-repeat center 100% / cover;
+            }
+
+            &--04 {
+                background: url("./images/festivalFilmDePleinAirBKGResa.jpg") no-repeat center 100% / cover;
+            }
+
+            &--05 {
+                background: url("./images/popcorn.jpg") no-repeat center 100% / cover;
+            }
+
+            &--06 {
+                background: url("./images/04-filmsBkg.jpg") no-repeat center 100% / cover;
+            }
+        }
+
+        &__body {
+            flex-basis: auto;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            a {
+                width: max-content;
+            }
+
+            p {
+                overflow-wrap: break-word;
+            }
+
+        }
+
+        &__title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+    }
+
+    @include mobile-sup {
+        .card {
+            max-width: 100%;
+            &__img {
+                padding-bottom: 70%;
+            }
+        }
+    }
+
+    @include tablette-sup {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include pc-sup {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,17 @@
+@mixin mobile-sup {
+    @media screen and (min-width:map-get($brekpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablette-sup {
+    @media screen and (min-width:map-get($brekpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin pc-sup {
+    @media screen and (min-width:map-get($brekpoints, pc)) {
+        @content;
+    }
+}

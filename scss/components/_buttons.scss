@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    border: 2px solid $tertiary-color;
+    border-radius: 25px;
+    color: $tertiary-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    //white-space: nowrap;
+    user-select: none;
+    transition: color 250ms, border-color 250ms;
+    //outline: 0;
+    //box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+    &:hover {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    &--yellow{
+        color: #f0f193;
+        border: 2px solid #f0f193;
+    }
+}

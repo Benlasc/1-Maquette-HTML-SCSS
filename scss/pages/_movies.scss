@@ -1,0 +1,127 @@
+.date {
+    background-color: $primary-color;
+    //min-width: 250px;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: $fontTitle;
+    text-transform: uppercase;
+    padding: 30px 0;
+    border-radius: 5px;
+    margin-bottom: 40px;
+
+    @include mobile-sup {
+        padding: 40px 0;
+    }
+
+    @include tablette-sup {
+        padding: 60px 0;
+    }
+}
+
+.movie {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__poster {
+        height: 250px;
+        overflow: scroll;
+        overflow-x: hidden;
+        flex-basis: 100%;
+        text-align: center;
+        min-width: 50px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mobile-sup {
+            flex-basis: 33.33%;
+            height: auto;
+            min-height: 200px;
+            overflow: visible;
+        }
+    }
+
+    &__presentation {
+
+        padding: 10px;
+
+        &>*+* {
+            margin-top: 15px;
+        }
+
+        // h2 {
+        //     text-transform: uppercase;
+        //     color: $secondary-color;
+        //     font-family: "Monserrat", sans-serif;
+        //     font-weight: 700;
+        //     border-left: 5px solid $tertiary-color;
+        //     padding-left: 5%;
+        //     font-size: 2rem;
+        // }
+
+        h3 {
+            font-size: 1rem;
+            font-family: $fontTitle;
+            color: #595959;
+        }
+
+        .rating {
+
+            &>.fill {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-style: normal;
+                color: $tertiary-color;
+
+                &::before {
+                    content: "\f005";
+                }
+            }
+
+            &>.empty {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 400;
+                font-style: normal;
+                color: $tertiary-color;
+
+                &::before {
+                    content: "\f005";
+                }
+            }
+
+            &>.half {
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-style: normal;
+                color: $tertiary-color;
+
+                &::before {
+                    content: "\f5c0";
+                }
+            }
+        }
+
+        p:last-of-type {
+            span {
+                color: lightgrey;
+                padding-right: 15px;
+            }
+        }
+
+        .btn-center {
+            text-align: center;
+
+            @include mobile-sup {
+                text-align: start;
+            }
+        }
+
+        @include mobile-sup {
+            flex-basis: 66.66%;
+            padding: 3% 2%;
+        }
+    }
+}

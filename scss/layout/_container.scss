@@ -1,0 +1,55 @@
+.container {
+
+    &>*+* {
+        margin-top: 40px;
+    }
+
+    &> :nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    padding: 0 0px;
+
+    @include mobile-sup {
+        margin: 0 auto;
+        max-width: map-get($brekpoints, mobile);
+        padding: 0 15px;
+    }
+
+    @include tablette-sup {
+        margin: 0 auto;
+        max-width: map-get($brekpoints, tablette);
+    }
+
+    @include pc-sup {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &--tight{
+        &>*+* {
+            margin-top: 0px;
+        }
+    }
+
+    &--noreverse{
+        &> :nth-child(even) {
+            flex-direction:row;
+        }
+    }
+
+    &--news{
+        margin-top: 40px;
+
+        .title{
+            margin-left: 40px;
+        }
+
+        @include mobile-sup {
+            .title{
+                margin-left: 0px;
+            }
+        }
+
+    }
+}

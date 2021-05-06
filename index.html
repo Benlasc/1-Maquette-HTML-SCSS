@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les films de plein air</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="./index.html" class="header__logo">
+            <img src="./logo.svg">
+        </a>
+
+        <div class="header__button ">
+            <svg x="0" y="0" width="54px" height="54px" viewBox="0 0 54 54">
+                <circle cx="27" cy="27" r="26"></circle>
+            </svg>
+            <span></span>
+
+        </div>
+
+        <ul class="header__menu">
+            <li><a href="">ACCUEIL</a></li>
+            <li><a href="./films.html">LES FILMS</a></li>
+            <li><a href="./index.html#booking">RÉSERVATION</a></li>
+            <li><a href="./news.html">ACTUALITÉS</a></li>
+            <li><a href="./index.html#contact">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <div class="container container--tight">
+        <div class="welcome">
+            <div class="home-img">
+            </div>
+            <article>
+                <p>Festival " Les Films de Plein Air "</p>
+                <div class="welcome__date">
+                    <span>Août</span>
+                    <span>2021</span>
+                    <span>Edition #01</span>
+                </div>
+                <p>Venez découvrir ou re-découvrir vos films d'auteurs préférés,<br> au parc Monceau à Paris.
+                </p>
+                <a class="btn btn--yellow" href="./films.html">Programmation</a>
+            </article>
+        </div>
+
+        <div class="about">
+            <div class="home-img">
+            </div>
+            <article class="article">
+                <h2 class="title"> A propos</h2>
+                <p>En cette année 2018, nous organisons la toute première édition du festival "Les films de plein air" !
+                </p>
+                <p>Alors, si vous êtes intéressé par les films d'auteurs, ou si vous aimez tout simplement assister à
+                    des projections de films en plein air, ce festival est fait pour vous !</p>
+                <p>Les séances sont <strong>gratuites</strong> mais pensez à réserver, on ne pourra peut-être pas
+                    accueillir tout le monde !</p>
+                <a href="./index.html#booking" class="btn"> Je réserve !</a>
+            </article>
+        </div>
+
+        <div class="actu">
+            <div class="home-img">
+            </div>
+            <article class="article">
+                <h2 class="title">Actualité</h2>
+                <p>Aller ! On se prépare pour notre 1ère édition du festival "Les films de plein air".</p>
+                <p>Nous venons d'obtenir l'autorisation de projeter au parc Monceau, de 18h à minuit durant la période
+                    du 05 au 08 août.</p>
+                <p>Notre sélection de films est disponible <a href="#selection">ici</a>.</p>
+                <p>Au fait, pensez à réserver, il ne faudrait pas manquer de chaises :).</p>
+                <a href="./rendez-vous-le-05-aout.html" class="btn">Lire la suite</a>
+            </article>
+        </div>
+    </div>
+
+    <div class="selection">
+        <div class="container container--tight">
+            <h2 class="title">Notre sélection 2021</h2>
+            <span id="selection" class="anchor"></span>
+            <div class="selection__posters">
+                <a href="./films.html">
+                    <img src="./images/la_haut.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#02">
+                    <img src="./images/shuttter_island.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#03">
+                    <img src="./images/petit_pays.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#04">
+                    <img src="./images/minuscule_adventure.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#05">
+                    <img src="./images/trial_chicago.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#06">
+                    <img src="./images/blade_runner.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#07">
+                    <img src="./images/voyage_lune.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#08">
+                    <img src="./images/lion.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#09">
+                    <img src="./images/drunk.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#10">
+                    <img src="./images/terrible_jungle.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#11">
+                    <img src="./images/antoinette_dans_les_cevennes.jpg" alt="affiche film">
+                </a>
+                <a href="./films.html#12">
+                    <img src="./images/legacy.jpg" alt="affiche film">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container--noreverse">
+
+        <div class="reservation">
+
+            <div class="home-img">
+
+            </div>
+
+            <div class="reservation__form">
+                <h2 class="title">Réservation en ligne</h2>
+                <span id="booking" class="anchor"></span>
+                <form class="form">
+                    <p>
+                        <label for="nom">Prénom Nom :</label>
+                        <input type="text" name="name" id="nom" placeholder="Jean Dupont" required />
+                    </p>
+                    <p>
+                        <label for="mail">E-mail :</label>
+                        <input type="email" name="mail" id="mail" placeholder="jeandupond@monmail.fr" required
+                            pattern="^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$" />
+                    </p>
+                    <p>
+                        <label for="phone">Téléphone :</label>
+                        <input type="tel" name="phone" id="phone" placeholder="0606060606" required
+                            pattern="^0[1-67]([-. ]?[0-9]{2}){4}$">
+                    </p>
+                    <p>
+                        <label for="tickets">Nombre de places :</label>
+                        <input type="number" name="tickets" id="tickets" placeholder="1" required min="1">
+                    </p>
+                    <p>
+                        <label for="session">Séances :</label>
+                        <select placeholder="Ma séance" required name="session" id="session">
+                            <option value="" selected disabled>Ma Séance</option>
+                            <optgroup label="5 août 2021">
+                                <option value="Là-haut">17h00 - Là-haut</option>
+                                <option value="Shutter Island">19h00 - Shutter Island</option>
+                                <option value="Petit Pays">21h30 - Petit Pays</option>
+                            </optgroup>
+                            <optgroup label="6 août 2021">
+                                <option value="Minuscule">17h00 - Minuscule 2</option>
+                                <option value="Les Sept de Chicago">19h00 - Les Sept de Chicago</option>
+                                <option value="Blade Runner">21h30 - Blade Runner</option>
+                            </optgroup>
+                            <optgroup label="7 août 2021">
+                                <option value="Voyage vers la Lune">17h00 - Voyage vers la Lune</option>
+                                <option value="Lion">19h00 - Lion</option>
+                                <option value="Drunk">21h30 - Drunk</option>
+                            </optgroup>
+                            <optgroup label="8 août 2021">
+                                <option value="Terrible Jungle">Terrible Jungle</option>
+                                <option value="Antoinette dans les Cévennes">19h00 - Antoinette dans les Cévennes
+                                </option>
+                                <option value="Legacy">21h30 - Legacy, notre héritage</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <button type="submit" class="btn">Je réserve !</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1311.9460342273524!2d2.3088047946718286!3d48.87933405452552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1620206369405!5m2!1sfr!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <div class="contact__form">
+                <h2 class="title">Contactez-nous !</h2>
+                <span id="contact" class="anchor"></span>
+
+                <form class="form">
+                    <p>
+                        <label for="nom">Prénom Nom :</label>
+                        <input type="text" name="name" id="nom" placeholder="Jean Dupont" required />
+                    </p>
+                    <p>
+                        <label for="mail">E-mail :</label>
+                        <input type="email" name="mail" id="mail" placeholder="jeandupond@monmail.fr" required
+                            pattern="^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$" />
+                    </p>
+                    <p>
+                        <label for="subject">Sujet :</label>
+                        <input type="text" name="subject" id="subject" placeholder="Sujet" required />
+                    </p>
+                    <p>
+                        <label for="message">Votre message :</label>
+                        <textarea rows="5" name="message" id="message" required></textarea>
+                    </p>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__menu">
+                <h2 class="footer__title">Liens utiles</h2>
+                <a href="">Accueil</a>
+                <a href="">Films</a>
+                <a href="">Actualités</a>
+                <a href="">Contact</a>
+                <a href="">Mentions légales</a>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Contactez-nous</h2>
+                <p class="footer__address">310 chemin des assos, 75000 Paris</p>
+                <p class="footer__mail">contact@filmspleinair.com</p>
+                <p class="footer__phone">06 00 00 00 00</p>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Suivez-nous !</h2>
+                <div class="socialicons">
+                    <a href="#" class="facebook"></a>
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="instagram"></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+.home-img {
+    min-height: 200px;
+}
+
+.welcome {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+        flex: 0 0 100%;
+
+        @include pc-sup {
+            flex: 0 0 50%;
+        }
+    }
+
+    .home-img {
+        background: url(./images/01-welcomeAside.jpg) no-repeat center 100% / cover;
+    }
+
+    a {
+        display: inline-block;
+    }
+
+    article {
+        padding: 15px;
+        background: $tertiary-color;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+        &>*+* {
+            margin-top: 50px;
+        }
+    }
+
+    &__date {
+
+        span {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+
+            &:nth-child(2) {
+                font-size: 4rem;
+                text-shadow: 5px 0px 0px #5eab99;
+            }
+        }
+    }
+
+    // @include tablette-sup {
+
+    //     article {
+
+    //         &>*+* {
+    //             margin-top: 20px;
+    //         }
+
+    //         & p:last-of-type {
+    //             font-size: 0.8rem;
+    //         }
+    //     }
+    // }
+
+    @include pc-sup {
+
+        article {
+            &>*+* {
+                margin-top: 40px;
+            }
+
+            & p:last-of-type {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+        flex: 0 0 100%;
+
+        @include pc-sup {
+            flex: 0 0 50%;
+        }
+    }
+
+    .home-img {
+        background: url("./images/02-parcMonceauAside.jpg") no-repeat center 45% / cover;
+
+        @include pc-sup {
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+
+.actu {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+        flex: 0 0 100%;
+
+        @include pc-sup {
+            flex: 0 0 50%;
+        }
+    }
+
+    .home-img {
+        background: url("./images/03-actuAside.jpg") no-repeat center 45% / cover;
+
+        @include pc-sup {
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $tertiary-color;
+    }
+}
+
+.selection {
+    background: url(./images/04-filmsBkg.jpg);
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding: 15px 25px;
+    background-color: #f8d174;
+    margin-top: 10px;
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    &__posters {
+        display: grid;
+
+        &>*+* {
+            margin-top: -7px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include mobile-sup {
+        &__posters {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            &>*+* {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    @include tablette-sup {
+        &__posters {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @include pc-sup {
+        margin-top: 30px;
+
+        &__posters {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
+
+.reservation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    &__form {
+        padding: 0px 15px;
+    }
+
+    &>* {
+        flex: 0 0 100%;
+    }
+
+    .home-img {
+        background: url(../../images/festivalFilmDePleinAirBKGResa.jpg) no-repeat center;
+        background-size: 100% auto;
+    }
+
+    @include pc-sup {
+        &>* {
+            flex: 1 1 0;
+            gap: 0px;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    &__form {
+        padding: 0px 15px;
+    }
+
+    &>* {
+        flex: 0 0 100%;
+    }
+
+    @include pc-sup {
+        &>* {
+            flex: 1 1 0;
+            gap: 0px;
+        }
+    }
+}

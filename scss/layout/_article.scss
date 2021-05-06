@@ -1,0 +1,131 @@
+.header {
+    position: sticky;
+    top: 0px;
+    padding: 8px 16px;
+    //min-width: 250px;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+
+    &__logo {
+        display: block;
+
+        img {
+            width: 150px;
+        }
+    }
+
+    &__button {
+        width: 55px;
+        height: 55px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform $duration;
+
+        &.show {
+            border-color: white;
+            transform: rotate(180deg);
+
+            &+.header__menu {
+                height: 210px;
+            }
+
+            svg {
+                stroke-dashoffset: 0;
+                transform: rotate(-180deg);
+            }
+
+            span {
+                background: transparent;
+
+                &::before {
+                    transform: translateY(9px) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translateY(-9px) rotate(-45deg);
+                }
+            }
+        }
+
+        span {
+            display: block;
+            background-color: #8f969a;
+            width: 26px;
+            height: 2px;
+            z-index: 1;
+            transition: background $duration;
+
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: relative;
+                width: 26px;
+                height: 2px;
+                bottom: 9px;
+                background-color: #8f969a;
+                transition: transform $duration;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+
+        svg {
+            position: absolute;
+            stroke: white;
+            stroke-width: 1px;
+            stroke-dasharray: 170;
+            stroke-dashoffset: 170;
+            transition: stroke-dashoffset $duration, transform $duration;
+        }
+
+        @include tablette-sup {
+            display: none;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding-left: 20px;
+        background-color: inherit;
+        height: 0;
+        transition: height $duration ease;
+
+        a {
+            display: inline-block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+
+            &:hover {
+                color: #56a393;
+            }
+        }
+
+        @include tablette-sup {
+            position: static;
+            display: flex;
+            height: auto !important;
+            width: auto;
+
+            &>*+* {
+                margin-left: 20px;
+            }
+
+        }
+    }
+}
